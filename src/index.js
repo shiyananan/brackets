@@ -10,14 +10,13 @@ module.exports = function check(str, bracketsConfig) {
 
   while (newStr === str) {
     for (let j = 0; j < brackets.length; j++) {
-      let thePair = brackets[j];
-      newStr = newStr.replace(thePair, '');
+      newStr = newStr.replace(brackets[j], '');
     }
     if (newStr != str) {
       str = newStr;
     } else {
       return newStr.length === 0;
     }
-  }
+  };
 
 };
